@@ -290,9 +290,84 @@ class Dog {
 
 ### Methods
 
-Although we created an object inside of main method, we did not print out anything about the spike object itself, nor did we instruct the class to perform any actions. Let's learn about how methods in Java are used to define actions.
+Although we created an object inside of main method, we did not print out anything about the fiona object itself, nor did we instruct the class to perform any actions. Let's learn about how methods in Java are used to define actions.
 
 A method is a pre-defined set of instructions. Methods are declared within a class. Java provides some pre-defined methods available to all classes, but we can create our own as well.
+
+```
+class Dog {
+
+	int age;  
+	public Dog(int dogsAge) {
+    age = dogsAge;
+
+}
+	public void bark() {
+  	   System.out.println("Woof!");
+	}
+
+	public static void main(String[] args) {
+			Dog fiona = new Dog(3);
+	}
+}
+
+```
+
+
+* Calling a method `bark()` on a object `fiona` to print out **"Woof!"**
+
+```
+class Dog {
+
+	int age;  
+  
+	public Dog(int dogsAge) {
+    	
+    	age = dogsAge;
+
+}
+	public void bark() {
+  		System.out.println("Woof!");
+	}
+
+	public static void main(String[] args) {
+		Dog fiona = new Dog(3);
+    
+    		fiona.bark();
+	}
+}
+```
+* creating another method to call on the object
+```
+class Dog {
+
+	int age;  
+  
+	public Dog(int dogsAge) {
+    age = dogsAge;
+
+}
+	public void bark() {
+  System.out.println("Woof!");
+	}
+
+  public void run(int feet) {
+    System.out.println("Your dog ran " + feet + " feet!");
+    
+  }
+	public static void main(String[] args) {
+			Dog fiona = new Dog(3);
+    
+    	fiona.bark();
+    	fiona.run(150);
+	}
+}
+```
+* The `void` keyword: The void keyword indicates that no value should be returned by the method after it executes all the logic in the method. If we do want the method to return a value after it finishes running, we can specify the return type.
+
+	* The void keyword (which means "completely empty") indicates to the method that no value is returned after calling that method.
+	
+	* Alternatively, we can use data type keywords (such as int, char, etc.) to specify that a method should return a value of that type.
 
 ### String Manipulation
 ### Prompting users for input
