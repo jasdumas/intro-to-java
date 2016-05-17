@@ -266,6 +266,7 @@ class Dog {
 					age = dogsAge;
 }
 // This is Java's built-in main method. When Java runs your program, the code inside of the main method is executed.
+
 	public static void main(String[] args) {
 
 	}
@@ -337,7 +338,7 @@ class Dog {
 	}
 }
 ```
-* creating another method to call on the object
+* creating another method to call on the object `feet`
 ```
 class Dog {
 
@@ -368,6 +369,55 @@ class Dog {
 	* The void keyword (which means "completely empty") indicates to the method that no value is returned after calling that method.
 	
 	* Alternatively, we can use data type keywords (such as int, char, etc.) to specify that a method should return a value of that type.
+
+* we use the `return` keyword in the method to return something.
+
+```
+class Dog {
+  
+  int age;
+
+	public Dog(int dogsAge) {
+    
+  	age = dogsAge;
+    
+  }
+  
+  public void bark() {
+		
+    System.out.println("Woof!");
+    
+	}
+	
+  public void run(int feet) {
+    
+    System.out.println("Your dog ran " + feet + " feet!");
+
+	}
+  
+  public int getAge() {
+
+    return age;
+    
+	}
+  
+	public static void main(String[] args) {
+    
+    Dog fiona = new Dog(5);
+    fiona.bark();
+    fiona.run(40);
+    int fionaAge = fiona.getAge();
+    System.out.println(fionaAge);
+
+	}
+
+}
+
+```
+	
+* One of the object-oriented programming concepts that allows us to reuse and maintain code more efficiently is called inheritance. It is used to share or inherit behavior from another class.
+
+* See **Dog.java** and how it inherits from **Animal.java** files
 
 ### String Manipulation
 ### Prompting users for input
